@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<h3>Oefenen oefenvragen (uit voorbeeld examen voor JavaScript</h3>
+<script type="text/javascript">
+
+/* De vraag van het tentamen is: What will be the output on the screen, 
+if the value entered by the user at the prompt is 10?
+  Ik heb de hele loop uitgeplozen en snap waarom het antwoord 12356789 is.
+  Maar toen viel het me op dat wanneer ik alle (10 t/m 15) getallen invoer 
+  het antwoord door gaat tot 123567891011121314 (bij 15). 
+  Waar komen al die eentjes vandaan? Hoe werkt dat? Weet jij dat toevallig?
+  */
+  
+
+var x = prompt("Enter an integer between 10 and 15");
+// wanneer a = 1, a = minder dan x, voeg nog een a toe;
+for (a = 1; a < x; a++) { 
+    // wanneer a == getal, sla dat getal over (continue);
+if (a == 4)
+continue; // door continue wordt getal in if overgeslagen. 
+// in alle andere situaties: noteer getal. 
+//tot ingevoerde getal (tot getal, niet inclusief getal) is bereikt. 
+else
+document.write(a);
+console.log(a);
+}
+
+// resultaat 10: 12356789
+// resultaat 11: 1235678910
+// resultaat 12: 123567891011
+// resultaat 13: 12356789101112
+// resultaat 14: 1235678910111213
+// resultaat 15: 123567891011121314
+
+
+</script>
+</body>
+</html>
